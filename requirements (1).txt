@@ -14,5 +14,5 @@ HuggingFaceEmbeddings
 os 
 dotenv
 htmlTemplates
-langchain_groq 
+langchain_groq  
 
