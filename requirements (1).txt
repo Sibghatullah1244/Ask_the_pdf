@@ -12,6 +12,7 @@ InstructorEmbedding==1.0.1
 sentence-transformers==2.2.2
 HuggingFaceEmbeddings
 os 
+dotenv
 htmlTemplates
 langchain_groq 
 
