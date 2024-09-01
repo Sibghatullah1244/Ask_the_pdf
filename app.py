@@ -13,8 +13,9 @@ from langchain_groq import ChatGroq
 from langchain.embeddings import HuggingFaceEmbeddings
 
 ## load the Groq API key
-os.environ["HUGGINGFACEHUB_API_TOKEN"]="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"
-groq_api_key=os.environ['GROQ_API_KEY']='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'
+hf_token = os.getenv("HF_TOKEN")
+grok_token = os.getenv("GROK_KEY")
+
 
 model_name = "sentence-transformers/all-MiniLM-L6-v2"
 
@@ -49,7 +50,7 @@ def get_vectorstore(text_chunks):
 
 
 def get_conversation_chain(vectorstore):
-    llm=ChatGroq(groq_api_key='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',
+    llm=ChatGroq(groq_api_key=grok_token,
              model_name="mixtral-8x7b-32768")
     # llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.5, "max_length":512})
 
